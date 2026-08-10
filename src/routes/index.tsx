@@ -30,7 +30,7 @@ function Index() {
   const stageRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: stageRef,
-    offset: ["start start", "end start"],
+    offset: ["start start", "end end"],
   });
 
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.22]);
