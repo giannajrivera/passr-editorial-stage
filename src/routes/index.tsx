@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "motion/react";
+import { useRef, useState } from "react";
+import { motion, useMotionValueEvent, useScroll, useTransform } from "motion/react";
 import crowd from "@/assets/crowd.jpg";
 
 export const Route = createFileRoute("/")({
@@ -36,9 +36,14 @@ function Index() {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.22]);
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "-8%"]);
   const headlineY = useTransform(scrollYProgress, [0, 0.6], ["0px", "-64px"]);
-  const headlineOpacity = useTransform(scrollYProgress, [0, 0.55], [1, 0]);
-  const logosOpacity = useTransform(scrollYProgress, [0.25, 0.6], [0, 1]);
   const logosY = useTransform(scrollYProgress, [0.25, 0.65], ["28px", "0px"]);
+
+  const [progress, setProgress] = useState(0);
+  useMotionValueEvent(scrollYProgress, "change", (v) => setProgress(v));
+
+  const clamp = (v: number) => Math.min(1, Math.max(0, v));
+  const headlineOpacity = clamp(1 - progress / 0.55);
+  const logosOpacity = clamp((progress - 0.25) / 0.35);
 
   return (
     <div className="bg-background text-foreground">
