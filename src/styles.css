@@ -4,6 +4,12 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --font-display: "Playfair Display", "Times New Roman", serif;
+  --font-sans: "Inter Tight", ui-sans-serif, system-ui, sans-serif;
+}
+
+
 /*
  * Design system definition.
  *
@@ -141,4 +147,61 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
   }
+}
+
+/* ---- Passr editorial design system ---- */
+:root {
+  --radius: 0.25rem;
+  --background: oklch(0.982 0.011 84.8); /* #FDFBF7 canvas */
+  --foreground: oklch(0.16 0.004 285);
+  --card: oklch(0.982 0.011 84.8);
+  --card-foreground: oklch(0.16 0.004 285);
+  --popover: oklch(0.982 0.011 84.8);
+  --popover-foreground: oklch(0.16 0.004 285);
+  --primary: oklch(0.14 0.003 285);
+  --primary-foreground: oklch(0.982 0.011 84.8);
+  --secondary: oklch(0.95 0.009 84.8);
+  --secondary-foreground: oklch(0.16 0.004 285);
+  --muted: oklch(0.95 0.009 84.8);
+  --muted-foreground: oklch(0.5 0.006 285);
+  --accent: oklch(0.95 0.009 84.8);
+  --accent-foreground: oklch(0.16 0.004 285);
+  --border: oklch(0.89 0.008 84.8);
+  --input: oklch(0.89 0.008 84.8);
+  --ring: oklch(0.16 0.004 285);
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+  font-weight: 500;
+}
+
+/* Soft gradient fade of the crowd silhouette into the canvas */
+@utility crowd-mask {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.15) 14%,
+    rgba(0, 0, 0, 0.65) 30%,
+    #000 48%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.15) 14%,
+    rgba(0, 0, 0, 0.65) 30%,
+    #000 48%
+  );
+}
+
+@utility eyebrow {
+  font-size: 0.6875rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  font-weight: 500;
 }
