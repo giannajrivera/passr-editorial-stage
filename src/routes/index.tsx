@@ -101,7 +101,13 @@ function Index() {
             </motion.div>
           </div>
         </section>
+
+        <footer className="flex items-center justify-between px-6 py-10 md:px-12">
+          <span className="font-display text-lg tracking-[-0.02em]">Passr</span>
+          <span className="eyebrow text-muted-foreground">© 2026</span>
+        </footer>
       </main>
+
     </div>
   );
 }
