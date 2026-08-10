@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Linkedin, Twitter } from "lucide-react";
-
 const columns = [
   {
     title: "Download",
@@ -32,17 +31,15 @@ const columns = [
     ],
   },
 ] as const;
-
 export function SiteFooter() {
   return (
     <footer className="relative overflow-hidden border-t border-border/60 bg-background">
       <span
         aria-hidden="true"
-        className="font-display pointer-events-none absolute inset-x-0 bottom-0 select-none text-center text-[26vw] leading-[0.75] lowercase tracking-[-0.04em] text-foreground/[0.045]"
+        className="font-display pointer-events-none absolute inset-x-0 bottom-0 select-none text-center text-[26vw] leading-[0.75] lowercase tracking-[-0.04em] text-[#0E0B16]/[0.045]"
       >
         passr
       </span>
-
       <div className="relative mx-auto grid max-w-[1400px] gap-12 px-6 py-20 md:grid-cols-[1fr_auto] md:px-12">
         <div className="flex flex-col gap-5">
           <div className="flex items-center gap-4 text-muted-foreground">
@@ -66,7 +63,6 @@ export function SiteFooter() {
           </div>
           <p className="text-xs text-muted-foreground">© 2026 • All Rights Reserved</p>
         </div>
-
         <div className="grid grid-cols-2 gap-x-10 gap-y-10 sm:grid-cols-4 md:gap-x-16">
           {columns.map((col) => (
             <div key={col.title}>
