@@ -33,9 +33,8 @@ function Index() {
     offset: ["start start", "end start"],
   });
 
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.28]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.22]);
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "-8%"]);
-  const crowdZ = useTransform(scrollYProgress, [0, 1], [0, 90]);
   const headlineY = useTransform(scrollYProgress, [0, 0.6], ["0px", "-64px"]);
   const headlineOpacity = useTransform(scrollYProgress, [0, 0.55], [1, 0]);
   const logosOpacity = useTransform(scrollYProgress, [0.25, 0.6], [0, 1]);
@@ -59,7 +58,6 @@ function Index() {
         <section ref={stageRef} className="relative h-[220vh]">
           <div
             className="sticky top-0 h-screen overflow-hidden"
-            style={{ perspective: "1400px", perspectiveOrigin: "50% 100%" }}
           >
             <motion.div
               style={{ y: headlineY, opacity: headlineOpacity }}
@@ -90,8 +88,8 @@ function Index() {
             </motion.div>
 
             <motion.div
-              style={{ scale, y, z: crowdZ, transformOrigin: "50% 100%" }}
-              className="crowd-mask pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[68vh]"
+              style={{ scale, y, transformOrigin: "50% 100%" }}
+              className="crowd-mask pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[62vh]"
             >
               <img
                 src={crowd}
