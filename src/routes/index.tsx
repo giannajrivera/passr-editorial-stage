@@ -96,10 +96,13 @@ function Index() {
           </div>
         </section>
 
-        <footer className="flex items-center justify-between px-6 py-10 md:px-12">
-          <span className="font-display text-lg tracking-[-0.02em]">Passr</span>
-          <span className="eyebrow text-muted-foreground">© 2026</span>
-        </footer>
+        <section className="mx-auto max-w-[1400px] px-6 py-24 text-center md:px-12">
+          <p className="eyebrow text-muted-foreground">True prices. Live events.</p>
+          <p className="font-display mx-auto mt-6 max-w-[26ch] text-[clamp(1.75rem,4vw,3.25rem)] leading-[1.02] tracking-[-0.02em]">
+            One search. Every marketplace. The real total.
+          </p>
+        </section>
+
       </main>
 
     </div>
