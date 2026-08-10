@@ -43,7 +43,7 @@ function Index() {
 
   const clamp = (v: number) => Math.min(1, Math.max(0, v));
   const headlineOpacity = clamp(1 - progress / 0.55);
-  const logosOpacity = clamp((progress - 0.25) / 0.35);
+  const logosOpacity = clamp((progress - 0.2) / 0.3);
 
   return (
     <div className="bg-background text-foreground">
@@ -80,12 +80,12 @@ function Index() {
             <motion.div
               id="partners"
               style={{ opacity: logosOpacity, y: logosY }}
-              className="absolute inset-x-0 bottom-10 z-30 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 px-6 md:gap-x-16"
+              className="absolute inset-x-0 bottom-24 z-30 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 px-6 md:gap-x-16"
             >
               {partners.map((p) => (
                 <span
                   key={p}
-                  className="text-[0.6875rem] font-medium tracking-[0.3em] text-primary-foreground/55 md:text-xs"
+                  className="text-[0.6875rem] font-medium tracking-[0.3em] text-primary-foreground/70 md:text-xs"
                 >
                   {p}
                 </span>
