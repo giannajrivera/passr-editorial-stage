@@ -58,7 +58,7 @@ function Index() {
               className="relative z-20 flex flex-col items-center px-6 pt-[26vh] text-center"
             >
               <p className="eyebrow text-muted-foreground">Live events, fairly priced</p>
-              <h1 className="font-display mt-8 max-w-[18ch] text-[clamp(2.75rem,8.5vw,7.5rem)] leading-[0.94] tracking-[-0.03em] text-[#0E0B16]">
+              <h1 className="font-display mt-8 max-w-[18ch] text-[clamp(2.75rem,8.5vw,7.5rem)] leading-[0.94] tracking-[-0.03em] text-[#53437C]">
                 Never Miss The Show
               </h1>
               <p className="mt-7 max-w-none text-sm leading-relaxed text-muted-foreground md:text-base">
