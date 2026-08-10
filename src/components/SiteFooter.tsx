@@ -5,8 +5,9 @@ const columns = [
   {
     title: "Download",
     links: [
-      { label: "App Store", to: "/features" },
+      { label: "Google Play", to: "/features" },
       { label: "Chrome Store", to: "/features" },
+      { label: "Apple Store", to: "/features" },
     ],
   },
   {
