@@ -19,13 +19,13 @@ const columns = [
       { label: "Press", to: "/contact" },
     ],
   },
-  {
+{
     title: "Resources",
     links: [
-      { label: "Privacy", to: "/faq" },
-      { label: "Terms", to: "/faq" },
-      { label: "Copyright", to: "/faq" },
-      { label: "Return Policy", to: "/faq" },
+      { label: "Privacy", to: "/privacy" },
+      { label: "Terms", to: "/terms" },
+      { label: "Copyright", to: "/copyright" },
+      { label: "Return Policy", to: "/return-policy" },
       { label: "Contact", to: "/contact" },
       { label: "FAQ", to: "/faq" },
     ],
