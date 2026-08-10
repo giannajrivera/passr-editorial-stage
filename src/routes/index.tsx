@@ -47,19 +47,8 @@ function Index() {
 
   return (
     <div className="bg-background text-foreground">
-      <header className="fixed inset-x-0 top-0 z-50 backdrop-blur-md">
-        <div className="mx-auto flex h-20 max-w-[1400px] items-center justify-between px-6 md:px-12">
-          <span className="font-display text-2xl tracking-[-0.02em]">Passr</span>
-          <a
-            href="#partners"
-            className="rounded-full bg-primary px-6 py-2.5 text-[0.8125rem] font-medium tracking-wide text-primary-foreground transition-opacity duration-300 hover:opacity-80"
-          >
-            Find tickets
-          </a>
-        </div>
-      </header>
-
       <main>
+
         <section ref={stageRef} className="relative h-[220vh]">
           <div
             className="sticky top-0 h-screen overflow-hidden"
@@ -107,10 +96,13 @@ function Index() {
           </div>
         </section>
 
-        <footer className="flex items-center justify-between px-6 py-10 md:px-12">
-          <span className="font-display text-lg tracking-[-0.02em]">Passr</span>
-          <span className="eyebrow text-muted-foreground">© 2026</span>
-        </footer>
+        <section className="mx-auto max-w-[1400px] px-6 py-24 text-center md:px-12">
+          <p className="eyebrow text-muted-foreground">True prices. Live events.</p>
+          <p className="font-display mx-auto mt-6 max-w-[26ch] text-[clamp(1.75rem,4vw,3.25rem)] leading-[1.02] tracking-[-0.02em]">
+            One search. Every marketplace. The real total.
+          </p>
+        </section>
+
       </main>
 
     </div>
