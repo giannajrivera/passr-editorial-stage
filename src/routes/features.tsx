@@ -26,18 +26,18 @@ export const Route = createFileRoute("/features")({
 const features = [
   {
     n: "01",
-    title: "Every Marketplace, One Price",
-    body: "Passr scans thousands of resale and primary listings in real time, then surfaces the true all-in price — fees included — so the cheapest seat is never hidden behind checkout math.",
+    title: "True Out-the-Door Price Matching",
+    body: "Standard tools only show the base price. Passr injects directly into your checkout page, strips away hidden platform service fees, and instantly compares the exact final cost across every secondary marketplace simultaneously. You see the true mathematical minimum before entering a credit card.",
   },
   {
     n: "02",
-    title: "Drop Alerts That Actually Land",
-    body: "Follow an event and Passr watches it for you. The moment a section dips below your threshold, you get a single, precise alert. No noise, no daily digest.",
+    title: "Market Value Validation",
+    body: "Stop guessing if a ticket is actually a good deal. We pull historical sales data for the exact section and row you are viewing. The overlay maps current pricing against the 30-day market average, showing you whether you are buying at a peak or a dip.",
   },
   {
     n: "03",
-    title: "One Tap To The Barrier",
-    body: "Saved payment, saved preferences, verified sellers only. From alert to confirmed tickets in a single tap, because the good seats do not wait.",
+    title: "Inventory Authenticity Scan",
+    body: "Many marketplaces list speculative tickets they do not actually own yet. Our engine cross-checks the unique listing ID against primary venue manifests in real-time, verifying that the physical seat is locked in stock and actively available before you hit purchase.",
   },
 ];
 
