@@ -67,7 +67,7 @@ function Index() {
               <h1 className="font-display mt-8 max-w-[18ch] text-[clamp(2.75rem,8.5vw,7.5rem)] leading-[0.94] tracking-[-0.03em]">
                 Never Miss The Show
               </h1>
-              <p className="mt-7 max-w-[42ch] text-sm leading-relaxed text-muted-foreground md:text-base">
+              <p className="mt-7 max-w-none text-sm leading-relaxed text-muted-foreground md:text-base">
                 Passr finds the best prices across thousands of live events.
               </p>
             </motion.div>
