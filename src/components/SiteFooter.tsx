@@ -28,6 +28,7 @@ const columns = [
       { label: "Return Policy", to: "/return-policy" },
       { label: "Contact", to: "/contact" },
       { label: "FAQ", to: "/faq" },
+      { label: "Pricing", to: "/pricing" },
     ],
   },
 ] as const;
