@@ -219,7 +219,7 @@ function Field({
   onChange: (v: string) => void;
   placeholder: string;
   type?: string;
-  error?: string;
+  error?: string | undefined;
 }) {
   return (
     <div>
