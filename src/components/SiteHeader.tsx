@@ -67,6 +67,13 @@ export function SiteHeader() {
                 {l.label}
               </Link>
             ))}
+            <Link
+              to="/waitlist"
+              onClick={() => setOpen(false)}
+              className="mt-1 inline-flex items-center justify-center rounded-full bg-iris px-6 py-3 text-[0.8125rem] font-medium text-primary-foreground"
+            >
+              Join the Waitlist
+            </Link>
           </div>
         </nav>
       )}
