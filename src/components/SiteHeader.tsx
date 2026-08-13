@@ -36,10 +36,10 @@ export function SiteHeader() {
             </Link>
           ))}
           <Link
-            to="/features"
+            to="/waitlist"
             className="rounded-full bg-iris px-6 py-2.5 text-[0.8125rem] font-medium tracking-wide text-primary-foreground transition-opacity duration-300 hover:opacity-85"
           >
-            Get Passr
+            Join the Waitlist
           </Link>
         </nav>
 
@@ -67,6 +67,13 @@ export function SiteHeader() {
                 {l.label}
               </Link>
             ))}
+            <Link
+              to="/waitlist"
+              onClick={() => setOpen(false)}
+              className="mt-1 inline-flex items-center justify-center rounded-full bg-iris px-6 py-3 text-[0.8125rem] font-medium text-primary-foreground"
+            >
+              Join the Waitlist
+            </Link>
           </div>
         </nav>
       )}
