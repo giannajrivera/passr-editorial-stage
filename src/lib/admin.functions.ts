@@ -29,12 +29,14 @@ export const claimAdminRole = createServerFn({ method: "POST" })
 export const getWaitlistEntries = createServerFn({ method: "GET" })
   .middleware([requireSupabaseAuth])
   .handler(async ({ context }) => {
-    const { data: isAdmin, error: roleError } = await context.supabase.rpc("has_role", {
-      _user_id: context.userId,
-      _role: "admin",
-    });
+    const { data: roles, error: roleError } = await context.supabase
+      .from("user_roles")
+      .select("role")
+      .eq("user_id", context.userId)
+      .eq("role", "admin");
     if (roleError) throw new Error("Could not verify admin access");
-    if (!isAdmin) throw new Error("Forbidden");
+    if (!roles || roles.length === 0) throw new Error("Forbidden");
+
 
     const { data, error } = await context.supabase
       .from("waitlist")
